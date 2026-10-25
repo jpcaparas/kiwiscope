@@ -12,6 +12,8 @@ const { app, BrowserWindow, Menu, session, shell } = require('electron');
 
 const INDEX_HTML = path.join(__dirname, '..', 'dist', 'index.html');
 const DEV_URL = process.env.KIWISCOPE_DEV_URL;
+// Set by scripts/record-demo.mjs so the game keeps rendering while captured.
+const RECORDING = process.env.KIWISCOPE_RECORDING === '1' && !app.isPackaged;
 
 function createWindow() {
   const win = new BrowserWindow({
@@ -22,7 +24,9 @@ function createWindow() {
     title: 'KiwiScope',
     backgroundColor: '#0b1d12',
     autoHideMenuBar: true,
+    alwaysOnTop: RECORDING,
     webPreferences: {
+      backgroundThrottling: !RECORDING,
       preload: path.join(__dirname, 'preload.cjs'),
       contextIsolation: true,
       nodeIntegration: false,

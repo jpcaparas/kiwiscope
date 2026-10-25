@@ -6,6 +6,14 @@ Hold out for ten waves of possums, stoats, rats and German wasps (plus the odd M
 
 Built with [Electron](https://www.electronjs.org/) and [three.js](https://threejs.org/). The textures, models and sound effects are all generated in code. The only bundled media is the voice lines on the ranger radio.
 
+## Playthrough
+
+[![KiwiScope playthrough: wave 1 and the wave 5 Mega Possum boss](docs/kiwiscope-poster.jpg)](docs/kiwiscope-playthrough.mp4)
+
+▶️ **[Watch the playthrough (MP4, 1m36s, with radio voice lines)](docs/kiwiscope-playthrough.mp4)**
+
+The clip is a scripted autopilot run. It plays wave 1, then skips ahead to the wave 5 Mega Possum. To re-record it, run `npm run demo` (it needs `ffmpeg`).
+
 ## Download
 
 Grab the latest build from [Releases](https://github.com/jpcaparas/kiwiscope/releases/latest):
@@ -103,7 +111,8 @@ src/
     ui/              HUD, menus, slang phrase banks
   assets/voice/      pre-generated voice lines (mp3)
 tests/               unit tests for the pure logic
-scripts/             icon and voice generation
+scripts/             icon, voice and demo-video generation
+docs/                playthrough video + poster
 ```
 
 ### Extending
