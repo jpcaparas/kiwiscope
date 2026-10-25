@@ -1,7 +1,7 @@
 {
   "name": "kiwiscope",
   "productName": "KiwiScope",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A Kiwiana first-person shooter: defend the kiwi from introduced predators. Built with Electron and three.js.",
   "author": "JP Caparas",
   "license": "MIT",

@@ -1,0 +1,20 @@
+{
+  "voiceId": "JFZ2Sw5TN92wIBOEx7pZ",
+  "voiceName": "Sam - New Zealand, Playful, and Warm (ElevenLabs voice library)",
+  "modelId": "eleven_multilingual_v2",
+  "lines": {
+    "intro": "Kia ora, ranger. The pests are after the kiwi eggs. Guard that burrow, and let's get stuck in.",
+    "wave1": "Heads up, here comes another lot.",
+    "wave2": "Look lively, more pests inbound.",
+    "wave3": "Yeah, nah, they're not done yet. Here they come.",
+    "boss": "Oh, yeah, nah. That is one massive possum. Take it down!",
+    "clear1": "Sweet as! Wave cleared.",
+    "clear2": "Chur, bro. Nice work.",
+    "clear3": "Good as gold. Grab a feed while you can.",
+    "nestDanger": "The eggs are in trouble! Get back to the burrow!",
+    "lowHealth": "You're looking a bit munted, mate. Find a feed.",
+    "victory": "Predator free! Absolute legend. The kiwi reckon you're choice.",
+    "lostNest": "Aw, gutted. The nest's gone. Have another crack.",
+    "lostPlayer": "Ranger down. Yeah, nah. Give it another go."
+  }
+}

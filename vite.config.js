@@ -8,6 +8,8 @@ export default defineConfig({
     outDir: '../dist',
     emptyOutDir: true,
     target: 'chrome130',
+    // three.js alone is ~600 kB; the game ships as one local bundle, so splitting buys nothing.
+    chunkSizeWarningLimit: 1500,
   },
   test: {
     root: '.',

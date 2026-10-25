@@ -7,3 +7,4 @@ release/
 
 # build/ holds electron-builder resources (icons) and must be tracked
 !build/
+.claude/

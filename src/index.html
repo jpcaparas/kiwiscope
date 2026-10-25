@@ -2,12 +2,85 @@
 <html lang="en-NZ">
 <head>
   <meta charset="utf-8" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' data: blob:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' data: blob:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>KiwiScope</title>
+  <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
-  <h1 style="font-family:sans-serif;color:#cfe">KiwiScope stub. Kia ora!</h1>
+  <canvas id="game"></canvas>
+
+  <div id="hud" class="hidden">
+    <div id="vignette"></div>
+    <div id="crosshair"><span></span><span></span><span></span><span></span></div>
+    <div id="top">
+      <div id="wave">Get ready</div>
+      <div id="left"></div>
+    </div>
+    <div id="score-box"><small>Score</small><div id="score">0</div></div>
+    <canvas id="radar" width="150" height="150" aria-label="Radar"></canvas>
+    <div id="banner"></div>
+    <div id="toasts"></div>
+    <div id="bars">
+      <div class="bar">
+        <label>Ranger</label>
+        <div class="track"><div id="hp-fill" class="fill hp"></div></div>
+        <span id="hp-text">100</span>
+      </div>
+      <div class="bar">
+        <label>Kiwi nest</label>
+        <div class="track"><div id="nest-fill" class="fill nest"></div></div>
+        <span id="nest-text">100%</span>
+      </div>
+    </div>
+    <div id="weapon-box">
+      <div id="weapon-name"></div>
+      <div id="ammo"></div>
+      <div class="track thin"><div id="reload-fill" class="fill reload"></div></div>
+      <div id="slots"></div>
+    </div>
+  </div>
+
+  <section id="screen-title" class="screen">
+    <div class="panel">
+      <p class="eyebrow">Department of Pest Control · Aotearoa</p>
+      <h1>Kiwi<span>Scope</span></h1>
+      <p class="lede">Possums, stoats, rats and wasps are coming for the kiwi eggs. Hold the burrow for ten waves and make the bush predator free.</p>
+      <button class="primary" data-action="start">Get stuck in</button>
+      <div class="controls">
+        <div><kbd>W A S D</kbd> move</div>
+        <div><kbd>Mouse</kbd> look / shoot</div>
+        <div><kbd>Shift</kbd> sprint</div>
+        <div><kbd>Space</kbd> jump</div>
+        <div><kbd>1–4</kbd> / <kbd>Wheel</kbd> weapons</div>
+        <div><kbd>R</kbd> reload</div>
+        <div><kbd>M</kbd> mute</div>
+        <div><kbd>Esc</kbd> pause</div>
+      </div>
+      <p class="fine">Weapons: Pāua Pistol · No. 8 Wire Scattergun · Feijoa Flinger · Jandal Launcher</p>
+      <button class="ghost" data-action="mute">Sound: on</button>
+    </div>
+  </section>
+
+  <section id="screen-pause" class="screen hidden">
+    <div class="panel small">
+      <h2>Smoko</h2>
+      <p class="lede">Take a breather. The pests will wait.</p>
+      <button class="primary" data-action="resume">Back into it</button>
+      <button class="ghost" data-action="restart">Start over</button>
+      <button class="ghost" data-action="mute">Sound: on</button>
+    </div>
+  </section>
+
+  <section id="screen-end" class="screen hidden">
+    <div class="panel small">
+      <h2 data-field="headline"></h2>
+      <p class="lede" data-field="detail"></p>
+      <p class="score-line">Score <strong data-field="score">0</strong></p>
+      <button class="primary" data-action="restart">Have another crack</button>
+    </div>
+  </section>
+
   <script type="module" src="./main.ts"></script>
 </body>
 </html>
