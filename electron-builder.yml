@@ -1,0 +1,40 @@
+appId: nz.caparas.kiwiscope
+productName: KiwiScope
+copyright: Copyright © 2026 JP Caparas
+directories:
+  output: release
+  buildResources: build
+files:
+  - dist/**
+  - electron/**
+  - package.json
+asar: true
+artifactName: ${productName}-${version}-${os}-${arch}.${ext}
+mac:
+  category: public.app-category.action-games
+  # Ad-hoc signature: no Apple Developer cert, but Apple Silicon requires a sealed bundle.
+  identity: "-"
+  hardenedRuntime: false
+  target:
+    - target: dmg
+      arch: [arm64, x64]
+    - target: zip
+      arch: [arm64, x64]
+win:
+  target:
+    - target: nsis
+      arch: [x64]
+    - target: zip
+      arch: [x64]
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+linux:
+  category: Game
+  synopsis: Kiwiana first-person shooter
+  target:
+    - target: AppImage
+      arch: [x64]
+    - target: tar.gz
+      arch: [x64]
+publish: null

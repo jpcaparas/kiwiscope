@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="65%">
+      <stop offset="0" stop-color="#2f7d4a"/>
+      <stop offset="1" stop-color="#0b2a17"/>
+    </radialGradient>
+  </defs>
+  <rect x="32" y="32" width="960" height="960" rx="210" fill="url(#bg)"/>
+  <!-- silver fern frond -->
+  <g fill="#cfe8d6" opacity="0.18" transform="rotate(-28 512 512)">
+    <rect x="504" y="140" width="16" height="760" rx="8"/>
+    <g id="leaves">
+      <ellipse cx="450" cy="230" rx="62" ry="14"/><ellipse cx="574" cy="230" rx="62" ry="14"/>
+      <ellipse cx="430" cy="320" rx="84" ry="16"/><ellipse cx="594" cy="320" rx="84" ry="16"/>
+      <ellipse cx="412" cy="420" rx="102" ry="18"/><ellipse cx="612" cy="420" rx="102" ry="18"/>
+      <ellipse cx="404" cy="530" rx="110" ry="18"/><ellipse cx="620" cy="530" rx="110" ry="18"/>
+      <ellipse cx="412" cy="640" rx="100" ry="17"/><ellipse cx="612" cy="640" rx="100" ry="17"/>
+      <ellipse cx="436" cy="750" rx="78" ry="15"/><ellipse cx="588" cy="750" rx="78" ry="15"/>
+    </g>
+  </g>
+  <!-- kiwi bird -->
+  <g>
+    <ellipse cx="500" cy="560" rx="200" ry="150" fill="#6b4a2b"/>
+    <circle cx="660" cy="470" r="70" fill="#6b4a2b"/>
+    <path d="M715 480 Q820 520 900 600" stroke="#e9d9a8" stroke-width="16" fill="none" stroke-linecap="round"/>
+    <circle cx="680" cy="455" r="10" fill="#111"/>
+    <path d="M440 690 L425 790 M425 790 L390 800 M425 790 L455 805" stroke="#e9d9a8" stroke-width="14" stroke-linecap="round" fill="none"/>
+    <path d="M540 695 L555 790 M555 790 L520 802 M555 790 L590 802" stroke="#e9d9a8" stroke-width="14" stroke-linecap="round" fill="none"/>
+  </g>
+  <!-- lens ring -->
+  <circle cx="512" cy="512" r="380" fill="none" stroke="#e8f1ec" stroke-width="26"/>
+  <circle cx="512" cy="512" r="410" fill="none" stroke="#e8f1ec" stroke-width="6" opacity="0.5"/>
+</svg>

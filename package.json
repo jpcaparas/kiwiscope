@@ -1,0 +1,35 @@
+{
+  "name": "kiwiscope",
+  "productName": "KiwiScope",
+  "version": "0.0.1",
+  "description": "A Kiwiana first-person shooter: defend the kiwi from introduced predators. Built with Electron and three.js.",
+  "author": "JP Caparas",
+  "license": "MIT",
+  "homepage": "https://github.com/jpcaparas/kiwiscope",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jpcaparas/kiwiscope.git"
+  },
+  "main": "electron/main.cjs",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "start": "npm run build && electron .",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "icons": "node scripts/make-icon.mjs",
+    "dist": "npm run build && electron-builder --publish never"
+  },
+  "devDependencies": {
+    "@types/three": "0.186.0",
+    "electron": "44.9.3",
+    "electron-builder": "26.17.0",
+    "typescript": "7.0.2",
+    "vite": "8.3.4",
+    "vitest": "5.0.3"
+  },
+  "dependencies": {
+    "three": "0.186.1"
+  }
+}
